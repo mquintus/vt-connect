@@ -27,7 +27,7 @@ args = parser.parse_args()
 
 f = open("vault/vt.key", "r")
 api_key = f.read().replace("\n", "")
-logging.info(f"Using API key: {api_key}")
+logging.info(f"Using API key: {api_key[:-40]}"+"*"*40)
 f.close()
 
 FILE_PATH = args.file
